@@ -35,6 +35,8 @@
 "  gs         n     Set the " mark at the current position then jump to the
 "                     declaration of the sub/function under cursor.
 "  ;[[        n     Jump to the last sub/function declaration.
+"  ;j         n     Jump to the previous item in the location list.
+"  ;k         n     Jump to the previous item in the location list.
 "  g;t        nv    Convert text to title case.
 "  ]x         nv    Go to next line that begins differently and centre.
 "  [x         nv    Go to previous line that begins differently and centre.
@@ -288,9 +290,11 @@ command! Funs  lvimgrep /^\s*\(\(static\|private\|protected\|public\)\s\+\)*func
 
 
 " GREP
-" ;/ searches with results set to quickfix list.
-command! -nargs=1 Grep vimgrep <args> % | cw
-nmap ;/ :Grep //<left>
+" ;/ searches with results set to location list.
+command! -nargs=1 Grep lvimgrep <args> % | cw
+nnoremap ;/ :Grep //<left>
+nnoremap ;j :lnext<CR>
+nnoremap ;k :lprevious<CR>
 
 " SEARCH ACROSS BUFFERS
 " Looks for a pattern in all the open buffers.
