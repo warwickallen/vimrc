@@ -226,7 +226,7 @@ source $HOME/.vim/functions/clever_home_key.vim
 " Adds a } and starts a new line when a { is typed, but only when it makes
 " sense to.  No special action is taken if paste mode is on.
 source $HOME/.vim/functions/smart_braces.vim
-inoremap <C-b> <C-o>:let paste=&paste \| set nopaste<CR>{<C-o>:let &paste=paste<CR>
+inoremap <C-b> #{<ESC>hxa
 
 
 " PARENTHESIS, SQUARE BRACKET, BRACE, ANGLE BRACKET, QUOTE EXPANDING
