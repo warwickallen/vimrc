@@ -347,3 +347,6 @@ nnoremap ;% i[%  %]<left><left><left>
 " set timeoutlen=4000
 " set ttimeout 
 " set ttimeoutlen=100
+
+" See file "termcap-settings" for default termcap settings.
+

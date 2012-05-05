@@ -1,0 +1,42 @@
+TERMCAP SETTINGS FOR SCREEN
+
+--- Terminal codes ---
+  t_AB=^[[4%p1%dm     t_cd=^[[J           t_CV=               t_dl=^[[M           t_ks=^[[?1h^[=      t_mr=^[[7m          t_RV=               t_sr=^[M            t_us=^[[4m          t_WS=               t_ZR=^[[m
+  t_AF=^[[3%p1%dm     t_ce=^[[K           t_ut=               t_fs=               t_le=^H             t_ms=y              t_Sb=               t_ts=               t_vb=^[g            t_SI=
+  t_AL=^[[%p1%dL      t_cl=^[[H^[[J       t_da=               t_IE=               t_mb=^[[5m          t_nd=^[[C           t_Sf=               t_te=^[[?1049l      t_vi=^[[?25l        t_EI=
+  t_al=^[[L           t_Co=8              t_db=               t_IS=               t_md=^[[1m          t_op=^[[39;49m      t_se=^[[23m         t_ti=^[[?1049h      t_vs=^[[34l         t_xs=
+  t_bc=               t_CS=               t_DL=^[[%p1%dM      t_ke=^[[?1l^[>      t_me=^[[m           t_RI=^[[%p1%dC      t_so=^[[3m          t_ue=^[[24m         t_WP=               t_ZH=^[[7m
+  t_cm=^[[%i%p1%d;%p2%dH
+  t_cs=^[[%i%p1%d;%p2%dr
+  t_ve=^[[34h^[[?25h
+--- Terminal keys ---
+t_@7 <End>       ^[[4~     t_k1 <F1>        ^[OP      t_k4 <F4>        ^[OS      t_k7 <F7>        ^[[18~    t_k; <F10>       ^[[21~    t_kN <PageDown>  ^[[6~     t_kd <Down>      ^[OB      t_kr <Right>     ^[OC
+t_F1 <F11>       ^[[23~    t_k2 <F2>        ^[OQ      t_k5 <F5>        ^[[15~    t_k8 <F8>        ^[[19~    t_kD <Del>       ^[[3~     t_kP <PageUp>    ^[[5~     t_kh <Home>      ^[[1~     t_ku <Up>        ^[OA
+t_F2 <F12>       ^[[24~    t_k3 <F3>        ^[OR      t_k6 <F6>        ^[[17~    t_k9 <F9>        ^[[20~    t_kI <Insert>    ^[[2~     t_kb <BS>        ^?        t_kl <Left>      ^[OD           <Mouse>     ^[[M
+
+
+TERMCAP SETTINGS FOR XTERM
+
+--- Terminal codes ---
+  t_AB=^[[4%p1%dm     t_cd=^[[J           t_CV=               t_dl=^[[M           t_ks=^[[?1h^[=      t_mr=^[[7m          t_RV=^[[>c          t_te=^[[?1049l      t_vs=^[[?12;25h     t_ZR=^[[m
+  t_AF=^[[3%p1%dm     t_ce=^[[K           t_ut=y              t_fs=^G             t_le=^H             t_ms=y              t_se=^[[27m         t_ti=^[[?1049h      t_SI=
+  t_AL=^[[%p1%dL      t_cl=^[[H^[[2J      t_da=               t_IE=^G             t_mb=^[[5m          t_nd=^[[C           t_so=^[[7m          t_ue=^[[m           t_EI=
+  t_al=^[[L           t_Co=8              t_db=               t_IS=^[]1;          t_md=^[[1m          t_op=^[[39;49m      t_sr=^[M            t_us=^[[4m          t_xs=
+  t_bc=               t_CS=               t_DL=^[[%p1%dM      t_ke=^[[?1l^[>      t_me=^[[m           t_RI=^[[%p1%dC      t_ts=^[]2;          t_vi=^[[?25l        t_ZH=^[[7m
+  t_cm=^[[%i%p1%d;%p2%dH
+  t_cs=^[[%i%p1%d;%p2%dr
+  t_Sb=^[[4%?%p1%{1}%=%t4%e%p1%{3}%=%t6%e%p1%{4}%=%t1%e%p1%{6}%=%t3%e%p1%d%;m
+  t_Sf=^[[3%?%p1%{1}%=%t4%e%p1%{3}%=%t6%e%p1%{4}%=%t1%e%p1%{6}%=%t3%e%p1%d%;m
+  t_vb=^[[?5h$<100/>^[[?5l
+  t_ve=^[[?12l^[[?25h
+  t_WP=^[[3;%p1%d;%p2%dt
+  t_WS=^[[8;%p1%d;%p2%dt
+--- Terminal keys ---
+t_#2 <S-Home>    ^[[1;2H   t_F1 <F11>       ^[[23;*~  t_K9 <kMultiply> ^[O*j     t_k5 <F5>        ^[[15;*~  t_kD <Del>       ^[[3~     t_kl <Left>      ^[O*D          <xF4>       ^[O*S          <xLeft>     ^[[1;*D
+t_#4 <S-Left>    ^[[1;2D   t_F2 <F12>       ^[[24;*~  t_KA <kEnter>    ^[O*M     t_k6 <F6>        ^[[17;*~  t_kI <Insert>    ^[[2;*~   t_kr <Right>     ^[O*C          <xEnd>      ^[O*F          <xRight>    ^[[1;*C
+t_%1 <Help>      ^[[28;*~  t_K1 <kHome>     ^[[1;*~   t_KB <kPoint>    ^[O*n     t_k7 <F7>        ^[[18;*~  t_kN <PageDown>  ^[[6;*~   t_ku <Up>        ^[O*A          <zEnd>      ^[[8;*~        <kDel>      ^[[3;*~
+t_%i <S-Right>   ^[[1;2C   t_K4 <kEnd>      ^[[4;*~   t_k1 <F1>        ^[[11;*~  t_k8 <F8>        ^[[19;*~  t_kP <PageUp>    ^[[5;*~        <Mouse>     ^[[M           <xHome>     ^[O*H
+t_&8 <Undo>      ^[[26;*~  t_K6 <kPlus>     ^[O*k     t_k2 <F2>        ^[[12;*~  t_k9 <F9>        ^[[20;*~  t_kb <BS>        ^?             <xF1>       ^[O*P          <zHome>     ^[[7;*~
+t_*7 <S-End>     ^[[1;2F   t_K7 <kMinus>    ^[O*m     t_k3 <F3>        ^[[13;*~  t_k; <F10>       ^[[21;*~  t_kd <Down>      ^[O*B          <xF2>       ^[O*Q          <xUp>       ^[[1;*A
+t_@7 <End>       ^[[1;*F   t_K8 <kDivide>   ^[O*o     t_k4 <F4>        ^[[14;*~  t_kB <S-Tab>     ^[[Z      t_kh <Home>      ^[[1;*H        <xF3>       ^[O*R          <xDown>     ^[[1;*B
+
