@@ -18,11 +18,15 @@
 "  ;;         nv    Start substitute command.
 "  ;#         v     Wrap in "deleted_code" POD block.
 "  ;(  ;)     v    \ 
-"  ;{  ;}     v    | Wrap higlighted block in brackets or quotes. Open brackets
+"  ;{  ;}     v    | Wrap highlighted block in brackets or quotes. Open brackets
 "  ;[  ;]     v    | or quotes leave the cursor at the start of the block,
 "  ;<  ;>     v    | close brackets leave it at the end. (;C is a special case
 "  ;"  ;'     v    | that wraps the block in 'C<< ... >>' for POD code snippits).
-"  ;C         v    /
+"  ;%  ;C     v    /
+"  ()  []     i    \
+"  {}  <>     i    | Moves the cursor inside the character pair.
+"  ""  ''     i    |
+"  %%         i    /
 "  ;?         n     Show this help.
 "  ;/         n     Search with results set to quickfix list.
 "  ;!         n     Save and execute the current buffer in the shell.
@@ -169,7 +173,7 @@ nnoremap gs m"/^\s*\(\(static\|private\|protected\|public\)\s\+\)*\(sub\|functio
 source $HOME/.vim/functions/vimdiff.vim
 
 
-" CHANGE BG COLOUR TO MAKE IT VERY OBVIOUS WHEN INSERT MODE IS ON
+" CHANGE BG COLOUR TO MAKE IT OBVIOUS WHEN INSERT MODE IS ON
 source $HOME/.vim/functions/change_insert_mode_colours.vim
 
 
@@ -227,15 +231,17 @@ source $HOME/.vim/functions/clever_home_key.vim
 " sense to.  No special action is taken if paste mode is on.
 source $HOME/.vim/functions/smart_braces.vim
 " Dumb opening brace.
-"inoremap <C-b> #{<ESC>hxa
-inoremap <C-O>:let @"='{'<CR>P
+inoremap <C-b> {
 
-" PARENTHESIS, SQUARE BRACKET, BRACE, ANGLE BRACKET, QUOTE EXPANDING
+" PARENTHESIS, SQUARE BRACKET, BRACE, QUOTE EXPANDING
 " ;<open bracket or quote> or ;<close bracket> wraps the visual-mode higlighted 
 " block in a bracket or quote pair.  Using an opening bracket or quote leaves the 
 " cursor at the start of the block, where a closing bracket leaves it at the end 
-" of the block. Works for: (, [, {, " and '.
+" of the block. Works for: (, [, {, ", ', %.
 " ;C is a special case that wraps the block in 'C<< ... >>' for POD code snippits.
+"
+" In insert mode, these bracket pairs typed quickly will automatically move the
+" cursor left to be inside the brackets or quotes: (), [], {}, <>, "", '' and %%.
 source $HOME/.vim/functions/expand_brackets.vim
 
 

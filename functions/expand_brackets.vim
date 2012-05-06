@@ -2,14 +2,17 @@
 " ;<open bracket or quote> or ;<close bracket> wraps the visual-mode higlighted 
 " block in a bracket or quote pair.  Using an opening bracket or quote leaves the 
 " cursor at the start of the block, where a closing bracket leaves it at the end 
-" of the block. Works for: (, [, {, " and '.
+" of the block. Works for: (, [, {, ", ', %.
 " ;C is a special case that wraps the block in 'C<< ... >>' for POD code snippits.
+"
+" In insert mode, these bracket pairs typed quickly will automatically move the
+" cursor left to be inside the brackets or quotes: (), [], {}, <>, "", '' and %%.
 
 function! WrapBlockInBrackets(opening_bracket, finish_at_top) range
   let l:closing_bracket =
     \ a:opening_bracket == 'C' ? ' >>' :
     \ a:opening_bracket == '(' ? ')' :
-    \ a:opening_bracket == '"' || a:opening_bracket == "'" ? a:opening_bracket :
+    \ a:opening_bracket == '"' || a:opening_bracket == "'" || a:opening_bracket == '%' ? a:opening_bracket :
     \ nr2char(char2nr(a:opening_bracket) + 2)
   let l:new_opening_bracket = a:opening_bracket == 'C' ? 'C<< ' : a:opening_bracket
   let paste_mode = &paste
@@ -64,3 +67,12 @@ vnoremap ;> :call WrapBlockInBrackets('<', 0)<cr>
 vnoremap ;" :call WrapBlockInBrackets('"', 1)<cr>
 vnoremap ;' :call WrapBlockInBrackets("'", 1)<cr>
 vnoremap ;C :call WrapBlockInBrackets("C", 1)<cr>
+vnoremap ;% :call WrapBlockInBrackets("%", 1)<cr>
+
+inoremap () ()<LEFT>
+inoremap [] []<LEFT>
+inoremap {} {}<LEFT>
+inoremap <> <><LEFT>
+inoremap "" ""<LEFT>
+inoremap '' ''<LEFT>
+inoremap %% %%<LEFT>
