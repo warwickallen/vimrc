@@ -23,10 +23,6 @@
 "  ;<  ;>     v    | close brackets leave it at the end. (;C is a special case
 "  ;"  ;'     v    | that wraps the block in 'C<< ... >>' for POD code snippits).
 "  ;%  ;C     v    /
-"  ()  []     i    \
-"  {}  <>     i    | Moves the cursor inside the character pair.
-"  ""  ''     i    |
-"  %%         i    /
 "  ;?         n     Show this help.
 "  ;/         n     Search with results set to quickfix list.
 "  ;!         n     Save and execute the current buffer in the shell.
@@ -239,9 +235,13 @@ inoremap <C-b> {
 " cursor at the start of the block, where a closing bracket leaves it at the end 
 " of the block. Works for: (, [, {, ", ', %.
 " ;C is a special case that wraps the block in 'C<< ... >>' for POD code snippits.
-"
-" In insert mode, these bracket pairs typed quickly will automatically move the
-" cursor left to be inside the brackets or quotes: (), [], {}, <>, "", '' and %%.
+
+" " In insert mode, these bracket pairs typed quickly will automatically move the
+" " cursor left to be inside the brackets or quotes: (), [], {}, <>, "", '' and %%.
+" "  ()  []     i    \
+" "  {}  <>     i    | Moves the cursor inside the character pair.
+" "  ""  ''     i    |
+" "  %%         i    /
 source $HOME/.vim/functions/expand_brackets.vim
 
 
