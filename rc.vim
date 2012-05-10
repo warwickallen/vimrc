@@ -114,6 +114,11 @@ set hidden              " Hide buffers when they are abandoned.
 set spelllang=en_nz
 let perl_include_pod=1  " Turns on syntax highlighting, with spell-check, inside POD portions of Perl files.
 
+" MOUSE STUFF
+" Make the middle click paste the clipboard _in paste mode_.
+inoremap <S-Insert> "*p
+" See :help mouse for other mouse options.
+
 
 " DO NOTHING
 " ; is used to begin many custom mappings, so <ESC> cancels waiting for a second key without flashing the
