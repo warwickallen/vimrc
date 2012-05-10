@@ -69,10 +69,10 @@ vnoremap ;' :call WrapBlockInBrackets("'", 1)<cr>
 vnoremap ;C :call WrapBlockInBrackets("C", 1)<cr>
 vnoremap ;% :call WrapBlockInBrackets("%", 1)<cr>
 
-inoremap () ()<LEFT>
-inoremap [] []<LEFT>
-inoremap {} {}<LEFT>
-inoremap <> <><LEFT>
-inoremap "" ""<LEFT>
-inoremap '' ''<LEFT>
-inoremap %% %%<LEFT>
+"inoremap () ()<LEFT>
+"inoremap [] []<LEFT>
+"inoremap {} {}<LEFT>
+"inoremap <> <><LEFT>
+"inoremap "" ""<LEFT>
+"inoremap '' ''<LEFT>
+"inoremap %% %%<LEFT>

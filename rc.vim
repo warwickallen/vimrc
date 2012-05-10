@@ -116,6 +116,7 @@ let perl_include_pod=1  " Turns on syntax highlighting, with spell-check, inside
 
 " MOUSE STUFF
 " Make the middle click paste the clipboard _in paste mode_.
+" (I couldn't get it to work for the mouse button, so will use shift-insert instead).
 inoremap <S-Insert> "*p
 " See :help mouse for other mouse options.
 
