@@ -77,10 +77,22 @@
 "  I     Repeat an edit for each line of a visual-block (<C-v>).  "i" doesn't
 "          work so "I" has to be used instead.  Other commands like, "s", "r",
 "          "x" and "~", work as expected.
-"  ]z    Move to the start of the current open fold.
-"  [z    Move to the end of the curent open fold.
-"  zj    Move to the next fold.
-"  zk    Move to the previous fold.
+" ~ Vim folding commands ~
+" zf<movement>
+"        Create a fold  the cursor to <movement>.
+" zj     Move the cursor to the next fold.
+" zk     Move the cursor to the previous fold.
+" zo     Open a fold at the cursor.
+" zO     Open all folds at the cursor.
+" zm     Increase the foldlevel by one.
+" zM     Close all open folds.
+" zr     Decrease the foldlevel by one.
+" zR     Decrease the foldlevel to zero -- all folds will be open.
+" zd     Delete the fold at the cursor.
+" zE     Delete all folds.
+" [z     Move to start of open fold.
+" ]z     Move to end of open fold.
+" Also see :help foldmethod
 "  ~ Vimdiff commands ~
 "  ]c    Jump to the next.
 "  [c    Jump to the previous change.
