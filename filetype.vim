@@ -16,3 +16,7 @@ au BufNewFile,BufRead *.tt2
 "TT2 and HTML"
 :let b:tt2_syn_tags = '\[% %] <!-- -->'
 
+" Language:      COFFEE (CoffeeScript)
+augroup filetypedetect
+  au! BufRead,BufNewFile *.coffee   setfiletype coffee
+augroup END
