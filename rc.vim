@@ -191,9 +191,10 @@ source $HOME/.vim/functions/vimdiff.vim
 source $HOME/.vim/functions/change_insert_mode_colours.vim
 
 
-" MAKE :W THE SAME AS :w
-" This is a common typo I make.
+" MAKE :W and :Q THE SAME AS :w and :q
+" These are common typos I make.
 :cabbrev W w
+:cabbrev Q q
 
 
 " WORD-WRAP BLOCK
