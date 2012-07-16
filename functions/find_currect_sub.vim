@@ -2,7 +2,7 @@
 "  ;s sets s mark to the top of current sub or function and display sub name.
 
 function! FindCurrentSub()
-  call search('^\s*\(sub\|function\)\>','sbe')
+  call search('^\c\s*\(static\s\+\|private\s\+\|protected\s\+\|public\s\+\)\?\(sub\|function\)\>','sbe')
   let line = getline(".")
   let i = stridx(line, '{')
   if i > 0
