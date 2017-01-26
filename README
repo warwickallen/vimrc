@@ -1,1 +1,4 @@
-Create a symbolic link `~/.vimrc' -> `.vim/rc.vim' to use this Vim set up.
+Create a symbolic links:
+    `~/.vim' -> `vimrc'
+    `~/.vimrc' -> `vimrc/rc.vim'
+to use this Vim set up.
