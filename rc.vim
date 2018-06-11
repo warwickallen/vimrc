@@ -109,6 +109,7 @@ autocmd BufNewFile,BufRead <buffer> set shiftwidth=4
 autocmd BufNewFile,BufRead <buffer> set tabstop=4
 autocmd BufNewFile,BufRead <buffer> set expandtab
 autocmd BufNewFile,BufRead <buffer> set foldenable
+autocmd BufNewFile,BufRead <buffer> set background=dark     " Use colours suitable for a dark background.
 
 syntax enable
 set cmdheight=1
