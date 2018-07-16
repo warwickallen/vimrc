@@ -104,6 +104,7 @@
 " Remove ALL autocommands for the current group.
 autocmd!
 
+" SETTINGS
 " Some settings only apply to the buffer they're called in.
 autocmd BufNewFile,BufRead <buffer> set shiftwidth=4
 autocmd BufNewFile,BufRead <buffer> set tabstop=4
@@ -111,6 +112,7 @@ autocmd BufNewFile,BufRead <buffer> set expandtab
 autocmd BufNewFile,BufRead <buffer> set foldenable
 autocmd BufNewFile,BufRead <buffer> set background=dark     " Use colours suitable for a dark background.
 
+" Settings that apply across the buffers.
 syntax enable
 set cmdheight=1
 set autoindent
@@ -126,6 +128,7 @@ set hidden              " Hide buffers when they are abandoned.
 " whether I want spell checking on.  ":set nospell" turns spell checking off.
 set spelllang=en_nz
 let perl_include_pod=1  " Turns on syntax highlighting, with spell-check, inside POD portions of Perl files.
+
 
 " MOUSE STUFF
 " Make the middle click paste the clipboard _in paste mode_.
@@ -349,6 +352,11 @@ source $HOME/.vim/functions/show_buffers_on_launch.vim
 " :Sqlautoreplace sets useful abbreviations for writing SQL commands.
 " :Nosqlautoreplace removes the abbreviations.
 source $HOME/.vim/functions/sql_autoreplace.vim
+
+
+" SAVE AND RELOAD SESSIONS
+" :Sa[aveSession] <name><CR> saves the current session.
+source $HOME/.vim/functions/sessions.vim
 
 
 "  ~ TEMPLATE TOOLKIT ~
